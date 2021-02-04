@@ -43,3 +43,13 @@ Collecting pyusb>=1.0.0 (from pyftdi>=0.40.0->Adafruit-Blinka->adafruit-circuitp
 Installing collected packages: pyusb, pyftdi, Adafruit-PlatformDetect, Adafruit-Blinka, adafruit-circuitpython-busdevice, adafruit-circuitpython-tcs34725
 Successfully installed Adafruit-Blinka-6.0.1 Adafruit-PlatformDetect-3.0.0 adafruit-circuitpython-busdevice-5.0.4 adafruit-circuitpython-tcs34725-3.3.4 pyftdi-0.52.9 pyusb-1.1.1
 ```
+```
+pip3 install smbus2
+```
+```
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting smbus2
+  Downloading https://files.pythonhosted.org/packages/c8/bf/62ef029fb7077fc87c3539f7365859bccc6cedb2bb20796b737b788c8d09/smbus2-0.4.1-py2.py3-none-any.whl
+Installing collected packages: smbus2
+Successfully installed smbus2-0.4.1
+```
