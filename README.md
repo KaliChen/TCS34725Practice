@@ -176,3 +176,30 @@ Preparing to unpack .../python3-pil.imagetk_5.4.1-2+deb10u2_armhf.deb ...
 Unpacking python3-pil.imagetk:armhf (5.4.1-2+deb10u2) ...
 Setting up python3-pil.imagetk:armhf (5.4.1-2+deb10u2) ...
 ```
+```
+pip3 install matplotlib
+```
+```
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting matplotlib
+  Downloading https://www.piwheels.org/simple/matplotlib/matplotlib-3.3.4-cp37-cp37m-linux_armv7l.whl (11.5MB)
+    100% |████████████████████████████████| 11.5MB 38kB/s 
+Requirement already satisfied: numpy>=1.15 in /usr/lib/python3/dist-packages (from matplotlib) (1.16.2)
+Collecting kiwisolver>=1.0.1 (from matplotlib)
+  Downloading https://www.piwheels.org/simple/kiwisolver/kiwisolver-1.3.1-cp37-cp37m-linux_armv7l.whl (1.4MB)
+    100% |████████████████████████████████| 1.4MB 163kB/s 
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl (67kB)
+    100% |████████████████████████████████| 71kB 2.7MB/s 
+Collecting python-dateutil>=2.1 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl (227kB)
+    100% |████████████████████████████████| 235kB 726kB/s 
+Collecting pillow>=6.2.0 (from matplotlib)
+  Downloading https://www.piwheels.org/simple/pillow/Pillow-8.1.0-cp37-cp37m-linux_armv7l.whl (1.3MB)
+    100% |████████████████████████████████| 1.3MB 283kB/s 
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading https://files.pythonhosted.org/packages/f7/d2/e07d3ebb2bd7af696440ce7e754c59dd546ffe1bbe732c8ab68b9c834e61/cycler-0.10.0-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.1->matplotlib) (1.12.0)
+Installing collected packages: kiwisolver, pyparsing, python-dateutil, pillow, cycler, matplotlib
+Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.1.0 pyparsing-2.4.7 python-dateutil-2.8.1
+```
