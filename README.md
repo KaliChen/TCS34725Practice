@@ -203,3 +203,17 @@ Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from 
 Installing collected packages: kiwisolver, pyparsing, python-dateutil, pillow, cycler, matplotlib
 Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.1.0 pyparsing-2.4.7 python-dateutil-2.8.1
 ```
+```
+pip3 install scipy
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting scipy
+  Downloading https://www.piwheels.org/simple/scipy/scipy-1.6.0-cp37-cp37m-linux_armv7l.whl (61.9MB)
+    100% |████████████████████████████████| 61.9MB 7.3kB/s 
+Collecting numpy>=1.16.5 (from scipy)
+  Downloading https://www.piwheels.org/simple/numpy/numpy-1.20.0-cp37-cp37m-linux_armv7l.whl (11.5MB)
+    100% |████████████████████████████████| 11.6MB 37kB/s 
+Installing collected packages: numpy, scipy
+  The scripts f2py, f2py3 and f2py3.7 are installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed numpy-1.20.0 scipy-1.6.0
+```
