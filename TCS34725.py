@@ -20,7 +20,7 @@ class TCS34725():
         self.TCS34725_tab.pack(side = tk.LEFT, expand=tk.YES, fill=tk.BOTH)
         #self.settingnotebook.add(self.ColorDraw_tab, text = "Color&Draw")
 
-        self.MarkSettingPanel = tk.LabelFrame(self.TCS34725_tab, text="Color and font Setting Panel",font=('Courier', 8))
+        self.MarkSettingPanel = tk.LabelFrame(self.TCS34725_tab, text="Color Panel",font=('Courier', 8))
         self.MarkSettingPanel.pack(side=tk.TOP, expand=tk.NO)
 
         '''Color Panel'''
@@ -29,12 +29,12 @@ class TCS34725():
         self.ColorButton = tk.Button(ColorPanel, text = "Return Color",font=('Courier', 7), command = self.askcolor)
         self.ColorButton.grid(row = 0, column = 0, sticky = tk.E+tk.W)
         
-
         
     def askcolor(self, event = None):
         #self.color = askcolor()
         self.color = recipe_266466_1.RGBToHTMLColor(simpletest.luminance())
-        self.ColorButton.configure(bg=self.color[1])
+        print(self.color)
+        self.ColorButton.configure(bg=self.color)
         #print(self.HTMLColorToRGB(self.color1[1]))
         
 if __name__ == '__main__':
