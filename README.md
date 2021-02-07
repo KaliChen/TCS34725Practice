@@ -6,8 +6,17 @@
 # Layout
 ![https://github.com/KaliChen/TCS34725Practice/blob/main/picture/tcs34725.png](https://github.com/KaliChen/TCS34725Practice/blob/main/picture/tcs34725.png)
 
+# Execute
+```
+python3 TCS34725.py 
+```
+# UI
+![https://github.com/KaliChen/TCS34725Practice/blob/main/picture/ui.JPG](https://github.com/KaliChen/TCS34725Practice/blob/main/picture/ui.JPG)
+
 # Demo
 [![Yes](https://img.youtube.com/vi/pMt5h8mP-Rw/0.jpg)](https://www.youtube.com/watch?v=pMt5h8mP-Rw)
+
+# Install requirements
 ```
 sudo pip3 install adafruit-tcs34725
 ```
@@ -210,6 +219,8 @@ Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.
 ```
 ```
 pip3 install scipy
+```
+```
 Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
 Collecting scipy
   Downloading https://www.piwheels.org/simple/scipy/scipy-1.6.0-cp37-cp37m-linux_armv7l.whl (61.9MB)
