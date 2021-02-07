@@ -3,6 +3,11 @@
 
 [https://learn.adafruit.com/adafruit-color-sensors/python-circuitpython](https://learn.adafruit.com/adafruit-color-sensors/python-circuitpython)
 
+# Layout
+![https://github.com/KaliChen/TCS34725Practice/blob/main/picture/tcs34725.png](https://github.com/KaliChen/TCS34725Practice/blob/main/picture/tcs34725.png)
+
+# Demo
+[![Yes](https://img.youtube.com/vi/pMt5h8mP-Rw/0.jpg)](https://www.youtube.com/watch?v=pMt5h8mP-Rw)
 ```
 sudo pip3 install adafruit-tcs34725
 ```
