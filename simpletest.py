@@ -7,7 +7,8 @@
 
 import smbus
 import time
-import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
 
 def luminance():
     # Get I2C bus
@@ -127,7 +128,8 @@ def data_0_7():
     #print(seconds)
 
     return(seconds, data)
-        
+    
+       
 if __name__ == '__main__':
     while(1):
         #ans = luminance()
@@ -137,3 +139,4 @@ if __name__ == '__main__':
         print(data_0_7(), cData_red_green_blue())
         # 暫停 1 秒
         time.sleep(1.0)
+
