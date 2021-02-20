@@ -28,7 +28,8 @@ class TCS34725():
         ColorPanel.grid(row = 0, column = 0 ,sticky = tk.E+tk.W)        
         self.ColorButton = tk.Button(ColorPanel, text = "Return Color",font=('Courier', 7), command = self.askcolor)
         self.ColorButton.grid(row = 0, column = 0, sticky = tk.E+tk.W)
-        
+        self.checkClearButton = tk.Button(ColorPanel, text = "Check Clear",font=('Courier', 7), command = self.checkClear)
+        self.checkClearButton.grid(row = 1, column = 0, sticky = tk.E+tk.W) 
         
     def askcolor(self, event = None):
         #self.color = askcolor()
@@ -36,6 +37,9 @@ class TCS34725():
         print(self.color)
         self.ColorButton.configure(bg=self.color)
         #print(self.HTMLColorToRGB(self.color1[1]))
+        
+    def checkClear(self, event = None):
+        print("checkClear")
         
 if __name__ == '__main__':
     root = tk.Tk()

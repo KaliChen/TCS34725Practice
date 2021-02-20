@@ -217,6 +217,34 @@ Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from 
 Installing collected packages: kiwisolver, pyparsing, python-dateutil, pillow, cycler, matplotlib
 Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.1.0 pyparsing-2.4.7 python-dateutil-2.8.1
 ```
+[https://tikzplotlib.readthedocs.io/](https://tikzplotlib.readthedocs.io/)
+
+```
+pip3 install tikzplotlib
+```
+```
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting tikzplotlib
+  Downloading https://files.pythonhosted.org/packages/e7/92/8c988a21d71cc773a63d5d25814cbdce16bf064899242d14e03d6a4f5df3/tikzplotlib-0.9.8-py3-none-any.whl (53kB)
+    100% |████████████████████████████████| 61kB 666kB/s 
+Requirement already satisfied: numpy in /home/pi/.local/lib/python3.7/site-packages (from tikzplotlib) (1.20.0)
+Requirement already satisfied: matplotlib>=1.4.0 in /home/pi/.local/lib/python3.7/site-packages (from tikzplotlib) (3.3.4)
+Requirement already satisfied: Pillow in /home/pi/.local/lib/python3.7/site-packages (from tikzplotlib) (8.1.0)
+Collecting importlib-metadata; python_version < "3.8" (from tikzplotlib)
+  Downloading https://files.pythonhosted.org/packages/f3/ed/da40116a204abb5c4dd1d929346d33e0d29cedb2cedd18ea98f0385dcd92/importlib_metadata-3.4.0-py3-none-any.whl
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /home/pi/.local/lib/python3.7/site-packages (from matplotlib>=1.4.0->tikzplotlib) (2.4.7)
+Requirement already satisfied: cycler>=0.10 in /home/pi/.local/lib/python3.7/site-packages (from matplotlib>=1.4.0->tikzplotlib) (0.10.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/pi/.local/lib/python3.7/site-packages (from matplotlib>=1.4.0->tikzplotlib) (1.3.1)
+Requirement already satisfied: python-dateutil>=2.1 in /home/pi/.local/lib/python3.7/site-packages (from matplotlib>=1.4.0->tikzplotlib) (2.8.1)
+Collecting zipp>=0.5 (from importlib-metadata; python_version < "3.8"->tikzplotlib)
+  Downloading https://files.pythonhosted.org/packages/41/ad/6a4f1a124b325618a7fb758b885b68ff7b058eec47d9220a12ab38d90b1f/zipp-3.4.0-py3-none-any.whl
+Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata; python_version < "3.8"->tikzplotlib)
+  Downloading https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl
+Requirement already satisfied: six in /home/pi/.local/lib/python3.7/site-packages (from cycler>=0.10->matplotlib>=1.4.0->tikzplotlib) (1.15.0)
+Installing collected packages: zipp, typing-extensions, importlib-metadata, tikzplotlib
+Successfully installed importlib-metadata-3.4.0 tikzplotlib-0.9.8 typing-extensions-3.7.4.3 zipp-3.4.0
+
+```
 ```
 pip3 install scipy
 ```
