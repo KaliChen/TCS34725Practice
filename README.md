@@ -128,6 +128,11 @@ Preparing to unpack .../libi2c-dev_4.1-1_armhf.deb ...
 Unpacking libi2c-dev (4.1-1) ...
 Setting up libi2c-dev (4.1-1) ...
 ```
+
+```
+ImportError: cannot import name 'ImageTk' from 'PIL' (/usr/lib/python3/dist-packages/PIL/__init__.py)
+```
+
 ```
 sudo apt-get install python3-pil python3-pil.imagetk
 ```
