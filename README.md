@@ -38,6 +38,10 @@ The python3-smbus package will allow us to interact with I2C devices from our Ra
 
 [https://pimylifeup.com/raspberry-pi-i2c/](https://pimylifeup.com/raspberry-pi-i2c/)
 
+```
+sudo apt-get install libatlas-base-dev
+```
+
 # Install requirements
 ```
 sudo pip3 install adafruit-tcs34725

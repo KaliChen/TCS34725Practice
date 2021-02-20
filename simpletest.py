@@ -7,6 +7,7 @@
 
 import smbus
 import time
+import matplotlib
 
 def luminance():
     # Get I2C bus
