@@ -18,6 +18,26 @@ python3 TCS34725.py
 
 [![Yes](https://img.youtube.com/vi/BBwuX95dqZ4/0.jpg)](https://www.youtube.com/watch?v=BBwuX95dqZ4)
 
+
+1. However, before we install the I2C tools, we need first to update our device.
+
+To update the package list then upgrade the packages, all we need to do is run the command below.
+```
+sudo apt update
+sudo apt full-upgrade
+```
+2. Once your Raspberry Pi has finished updating, we can install the I2C tools and the Python SMBus package.
+
+To install these two packages, run the following command.
+```
+sudo apt install -y i2c-tools python3-smbus
+```
+The i2c-tools package allows us to interact with the I2C protocol on our Raspberry Pi. Using this, we will be able to detect our I2C connections.
+
+The python3-smbus package will allow us to interact with I2C devices from our Raspberry Pi by using Python.
+
+[https://pimylifeup.com/raspberry-pi-i2c/](https://pimylifeup.com/raspberry-pi-i2c/)
+
 # Install requirements
 ```
 sudo pip3 install adafruit-tcs34725
