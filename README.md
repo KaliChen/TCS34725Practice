@@ -16,6 +16,8 @@ python3 TCS34725.py
 # Demo
 [![Yes](https://img.youtube.com/vi/pMt5h8mP-Rw/0.jpg)](https://www.youtube.com/watch?v=pMt5h8mP-Rw)
 
+[![Yes](https://img.youtube.com/vi/BBwuX95dqZ4/0.jpg)](https://www.youtube.com/watch?v=BBwuX95dqZ4)
+
 # Install requirements
 ```
 sudo pip3 install adafruit-tcs34725
