@@ -9,6 +9,8 @@ import smbus
 import time
 import matplotlib.pyplot as plt
 import numpy as np
+from pylive import live_plotter
+
 
 def luminance():
     # Get I2C bus
@@ -57,8 +59,14 @@ def luminance():
     r = int(red/cData *256 + luminance/cData*256)
     g = int(green/cData *256+ luminance/cData*256)
     b = int(blue/cData *256+ luminance/cData*256)
-    return(r, g, b)
+    seconds = time.time()
+    return(seconds, r, g, b)
     
+def Doluminance():
+    while(1):
+        print(luminance())
+        # 暫停 1 秒
+        time.sleep(1.0)      
 def cData_red_green_blue():
     # Get I2C bus
     bus = smbus.SMBus(1)
@@ -92,9 +100,19 @@ def cData_red_green_blue():
     red = data[3] * 256 + data[2]
     green = data[5] * 256 + data[4]
     blue = data[7] * 256 + data[6] 
-    
-    return (cData, red, green, blue)
+    seconds = time.time()    
+    return (seconds, cData, red, green, blue)
 
+def Do_cData_red_green_blue():
+    while(1):
+        #ans = luminance()
+        #ans = data_0_7()
+        #print(ans)
+        #ans = cData_red_green_blue()
+        print(cData_red_green_blue())
+        # 暫停 1 秒
+        time.sleep(1.0)
+        
 def data_0_7():
     # Get I2C bus
     bus = smbus.SMBus(1)
@@ -126,17 +144,26 @@ def data_0_7():
     seconds = time.time()
     # 輸出結果
     #print(seconds)
-
     return(seconds, data)
-    
-       
-if __name__ == '__main__':
+
+def Do_data_0_7():
     while(1):
-        #ans = luminance()
-        #ans = data_0_7()
-        #print(ans)
-        #ans = cData_red_green_blue()
-        print(data_0_7(), cData_red_green_blue())
+        print(data_0_7())
         # 暫停 1 秒
         time.sleep(1.0)
-
+            
+def matplotlibLive():
+    size = 100
+    x_vec = np.linspace(0,1,size+1)[0:-1]
+    y_vec = np.random.randn(len(x_vec))
+    line1 = []
+    while True:
+        rand_val = np.random.randn(1)
+        y_vec[-1] = rand_val
+        line1 = live_plotter(x_vec,y_vec,line1)
+        y_vec = np.append(y_vec[1:],0.0)    
+       
+if __name__ == '__main__':
+    #Do_data_0_7()
+    #Do_cData_red_green_blue()
+    matplotlibLive()
