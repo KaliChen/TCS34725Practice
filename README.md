@@ -251,6 +251,18 @@ Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.
 [https://tikzplotlib.readthedocs.io/](https://tikzplotlib.readthedocs.io/)
 
 ```
+sudo pip3 install keyboard
+```
+```
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting keyboard
+  Downloading https://files.pythonhosted.org/packages/55/88/287159903c5b3fc6d47b651c7ab65a54dcf9c9916de546188a7f62870d6d/keyboard-0.13.5-py3-none-any.whl (58kB)
+    100% |████████████████████████████████| 61kB 577kB/s 
+Installing collected packages: keyboard
+Successfully installed keyboard-0.13.5
+
+```
+```
 pip3 install tikzplotlib
 ```
 ```
