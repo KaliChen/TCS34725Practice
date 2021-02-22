@@ -1,4 +1,3 @@
-  
 # Distributed with a free-will license.
 # Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
 # TCS34725
@@ -9,8 +8,9 @@ import smbus
 import time
 import matplotlib.pyplot as plt
 import numpy as np
+import keyboard
 from pylive import live_plotter
-
+from pylive import live_plotter_Data_0_7
 
 def luminance():
     # Get I2C bus
@@ -161,9 +161,31 @@ def matplotlibLive():
         rand_val = np.random.randn(1)
         y_vec[-1] = rand_val
         line1 = live_plotter(x_vec,y_vec,line1)
-        y_vec = np.append(y_vec[1:],0.0)    
+        y_vec = np.append(y_vec[1:],0.0) 
+
+        if keyboard.is_pressed('q'):exit()
+
+def matplotlibLive_data_0_7():
+    size = 100
+    x0_vec = np.linspace(0,1,size+1)[0:-1]
+    x1_vec = np.linspace(0,1,size+1)[0:-1]
+    y0_vec = np.random.randn(len(x0_vec))
+    y1_vec = np.random.randn(len(x0_vec))
+    
+    line = []
+    while True:
+        rand_val = np.random.randn(1)
+        y0_vec[-1] = rand_val
+        y1_vec[-1] = rand_val+1
+     
+        line = live_plotter_Data_0_7(x0_vec, y0_vec,line)
+        #line = live_plotter(x0_vec, y0_vec,line)
+        y0_vec = np.append(y0_vec[1:],0.0) 
+        y1_vec = np.append(y1_vec[1:],0.0) 
+        if keyboard.is_pressed('q'):exit()
        
 if __name__ == '__main__':
     #Do_data_0_7()
     #Do_cData_red_green_blue()
-    matplotlibLive()
+    #matplotlibLive()
+    matplotlibLive_data_0_7()
