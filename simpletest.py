@@ -166,22 +166,53 @@ def matplotlibLive():
         if keyboard.is_pressed('q'):exit()
 
 def matplotlibLive_data_0_7():
+    seconds = int(time.time()*10)
     size = 100
     x0_vec = np.linspace(0,1,size+1)[0:-1]
-    x1_vec = np.linspace(0,1,size+1)[0:-1]
+
     y0_vec = np.random.randn(len(x0_vec))
     y1_vec = np.random.randn(len(x0_vec))
+    y2_vec = np.random.randn(len(x0_vec))
+    y3_vec = np.random.randn(len(x0_vec))
+    y4_vec = np.random.randn(len(x0_vec))
+    y5_vec = np.random.randn(len(x0_vec))
+    y6_vec = np.random.randn(len(x0_vec))
+    y7_vec = np.random.randn(len(x0_vec))
     
-    line = []
+    
+    line0 = []
+    line1 = []
+    line2 = []
+    line3 = []
+    line4 = []
+    line5 = []
+    line6 = []
+    line7 = []
     while True:
         rand_val = np.random.randn(1)
         y0_vec[-1] = rand_val
-        y1_vec[-1] = rand_val+1
-     
-        line = live_plotter_Data_0_7(x0_vec, y0_vec,line)
-        #line = live_plotter(x0_vec, y0_vec,line)
+        y1_vec[-1] = rand_val*0.1 + 1
+        y2_vec[-1] = rand_val*0.2 
+        y3_vec[-1] = rand_val*0.3 + 1
+        y4_vec[-1] = rand_val*0.4 
+        y5_vec[-1] = rand_val*0.5 + 1
+        y6_vec[-1] = rand_val*0.6 
+        y7_vec[-1] = rand_val*0.7 + 1
+        
+        line0,line1,line2,line3,line4,line5,line6,line7 = live_plotter_Data_0_7(x0_vec,
+                                                                                y0_vec,y1_vec,y2_vec,y3_vec,y4_vec,y5_vec,y6_vec,y7_vec,
+                                                                                seconds,
+                                                                                line0,line1,line2,line3,line4,line5,line6,line7 )
+
         y0_vec = np.append(y0_vec[1:],0.0) 
         y1_vec = np.append(y1_vec[1:],0.0) 
+        y2_vec = np.append(y2_vec[1:],0.0) 
+        y3_vec = np.append(y3_vec[1:],0.0) 
+        y4_vec = np.append(y4_vec[1:],0.0) 
+        y5_vec = np.append(y5_vec[1:],0.0) 
+        y6_vec = np.append(y6_vec[1:],0.0) 
+        y7_vec = np.append(y7_vec[1:],0.0) 
+        
         if keyboard.is_pressed('q'):exit()
        
 if __name__ == '__main__':
