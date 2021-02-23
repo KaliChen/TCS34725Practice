@@ -166,7 +166,7 @@ def matplotlibLive():
         if keyboard.is_pressed('q'):exit()
 
 def matplotlibLive_data_0_7():
-    seconds = int(time.time()*10)
+    #seconds = int(time.time()*10)
     size = 100
     x0_vec = np.linspace(0,1,size+1)[0:-1]
 
@@ -189,15 +189,18 @@ def matplotlibLive_data_0_7():
     line6 = []
     line7 = []
     while True:
-        rand_val = np.random.randn(1)
-        y0_vec[-1] = rand_val
-        y1_vec[-1] = rand_val*0.1 + 1
-        y2_vec[-1] = rand_val*0.2 
-        y3_vec[-1] = rand_val*0.3 + 1
-        y4_vec[-1] = rand_val*0.4 
-        y5_vec[-1] = rand_val*0.5 + 1
-        y6_vec[-1] = rand_val*0.6 
-        y7_vec[-1] = rand_val*0.7 + 1
+        times, data = data_0_7()
+        seconds = int(times*10)
+        #print(times, data)
+        #rand_val = np.random.randn(1)
+        y0_vec[-1] = data[0]
+        y1_vec[-1] = data[1]
+        y2_vec[-1] = data[2] 
+        y3_vec[-1] = data[3]
+        y4_vec[-1] = data[4] 
+        y5_vec[-1] = data[5]
+        y6_vec[-1] = data[6] 
+        y7_vec[-1] = data[7]
         
         line0,line1,line2,line3,line4,line5,line6,line7 = live_plotter_Data_0_7(x0_vec,
                                                                                 y0_vec,y1_vec,y2_vec,y3_vec,y4_vec,y5_vec,y6_vec,y7_vec,
