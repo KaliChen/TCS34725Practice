@@ -9,6 +9,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 import keyboard
+import math
 from pylive import live_plotter
 from pylive import live_plotter_Data_0_7
 
@@ -167,7 +168,7 @@ def matplotlibLive():
 
 def matplotlibLive_data_0_7():
     #seconds = int(time.time()*10)
-    size = 100
+    size = 400
     x0_vec = np.linspace(0,1,size+1)[0:-1]
 
     y0_vec = np.random.randn(len(x0_vec))
@@ -188,9 +189,10 @@ def matplotlibLive_data_0_7():
     line5 = []
     line6 = []
     line7 = []
+    tmp = [0,0,0,0,0,0,0,0]
     while True:
         times, data = data_0_7()
-        seconds = int(times*10)
+        #seconds = int(times*10)
         #print(times, data)
         #rand_val = np.random.randn(1)
         y0_vec[-1] = data[0]
@@ -201,12 +203,23 @@ def matplotlibLive_data_0_7():
         y5_vec[-1] = data[5]
         y6_vec[-1] = data[6] 
         y7_vec[-1] = data[7]
+        print(tmp[0],data[0],abs(data[0]-tmp[0]))
+        print(tmp[2],data[2],abs(data[2]-tmp[2]))
+        print(tmp[4],data[4],abs(data[4]-tmp[4]))
+        print(tmp[6],data[6],abs(data[6]-tmp[6]))
+
+        if(math.sqrt((data[0]-tmp[0])**2 + (data[2]-tmp[2])**2 + (data[4]-tmp[4])**2 + (data[6]-tmp[6])**2) < 2.0 ):
+        #if(abs(data[0]-tmp[0]) < 10 and abs(data[2]- tmp[2]) < 10 and abs(data[4]-tmp[4]) < 10  and abs(data[6]-tmp[6]) <10):
+            print("The system is steady")
+        else:
+            print("The system is running")
+        tmp = data
         
         line0,line1,line2,line3,line4,line5,line6,line7 = live_plotter_Data_0_7(x0_vec,
                                                                                 y0_vec,y1_vec,y2_vec,y3_vec,y4_vec,y5_vec,y6_vec,y7_vec,
-                                                                                seconds,
+                                                                                #seconds,
                                                                                 line0,line1,line2,line3,line4,line5,line6,line7 )
-
+        
         y0_vec = np.append(y0_vec[1:],0.0) 
         y1_vec = np.append(y1_vec[1:],0.0) 
         y2_vec = np.append(y2_vec[1:],0.0) 
@@ -215,6 +228,10 @@ def matplotlibLive_data_0_7():
         y5_vec = np.append(y5_vec[1:],0.0) 
         y6_vec = np.append(y6_vec[1:],0.0) 
         y7_vec = np.append(y7_vec[1:],0.0) 
+        
+
+        time.sleep(0.5)
+
         
         if keyboard.is_pressed('q'):exit()
        

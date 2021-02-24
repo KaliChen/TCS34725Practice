@@ -37,14 +37,14 @@ def live_plotter_Data_0_7(x_vec,
                           y5_data,
                           y6_data,
                           y7_data,
-                          current_time,
+                          #current_time,
                           line0,line1,line2,line3,line4,line5,line6,line7,
                           identifier='',
                           pause_time=0.1):
     if(line0==[] or line1==[] or line2==[] or line3==[] or line4==[] or line5==[] or line6==[] or line7==[]):
         # this is the call to matplotlib that allows dynamic plotting
         plt.ion()
-        fig = plt.figure(figsize=(12,5))
+        fig = plt.figure(figsize=(15,7))
 
         ax = fig.add_subplot(111)
         bx = fig.add_subplot(111)
@@ -80,6 +80,7 @@ def live_plotter_Data_0_7(x_vec,
     line6.set_ydata(y6_data)
     line7.set_ydata(y7_data)
     plt.pause(pause_time)
+    
     
     # return line so we can update it again in the next iteration
     return (line0,line1,line2,line3,line4,line5,line6,line7)
