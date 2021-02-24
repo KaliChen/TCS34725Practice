@@ -8,7 +8,7 @@ from tkinter import filedialog
 from tkinter import ttk
 from tkinter.colorchooser import *
 import recipe_266466_1
-import simpletest
+import i2c_symbus
 
 class TCS34725():
     def __init__(self, master):
@@ -39,7 +39,8 @@ class TCS34725():
         #print(self.HTMLColorToRGB(self.color1[1]))
         
     def checkClear(self, event = None):
-        print("checkClear")
+        i2c_symbus.matplotlibLive_data_0_7()
+        #print("checkClear")
         
 if __name__ == '__main__':
     root = tk.Tk()
