@@ -33,7 +33,7 @@ class TCS34725():
         
     def askcolor(self, event = None):
         #self.color = askcolor()
-        self.color = recipe_266466_1.RGBToHTMLColor(simpletest.luminance())
+        self.color = recipe_266466_1.RGBToHTMLColor(i2c_symbus.luminance())
         print(self.color)
         self.ColorButton.configure(bg=self.color)
         #print(self.HTMLColorToRGB(self.color1[1]))
