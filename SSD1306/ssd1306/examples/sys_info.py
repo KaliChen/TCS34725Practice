@@ -69,9 +69,9 @@ def stats(oled):
         draw.text((0, 26), disk_usage('/'), font=font2, fill=255)
         draw.text((0, 38), network('wlan0'), font=font2, fill=255)
 
-def main():
+def SysInfo():
     oled = ssd1306(port=1, address=0x3C)
     stats(oled)
 
 if __name__ == "__main__":
-    main()
+    SysInfo()
