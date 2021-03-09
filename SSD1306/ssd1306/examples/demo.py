@@ -52,7 +52,7 @@ def show_picture():
         logo = Image.open('images/pi_logo.png')
         draw.bitmap((32, 0), logo, fill=1)
 
-if __name__ == "__main__":
+def main():
     while(1):
         Testing()
         # 暫停 1 秒
@@ -62,4 +62,7 @@ if __name__ == "__main__":
         time.sleep(1.0) 
         SysInfo()
         # 暫停 1 秒
-        time.sleep(1.0) 
+        time.sleep(1.0)         
+
+if __name__ == "__main__":
+    main()
