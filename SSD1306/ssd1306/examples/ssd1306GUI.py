@@ -7,8 +7,7 @@ from tkinter.ttk import Notebook
 #from tkinter import filedialog
 #from tkinter import ttk
 #from tkinter.colorchooser import *
-#import recipe_266466_1
-#import i2c_symbus
+
 from demo import show_picture, Testing, main
 from maze import Maze
 from sys_info import SysInfo
@@ -40,8 +39,8 @@ class SSD1306GUI():
         self.mainButton = tk.Button(SSD1306GUIPanel, text = "main",font=('Courier', 7), command = main)
         self.mainButton.grid(row = 3, column = 0, sticky = tk.E+tk.W)
 
-        #self.MazeDemoButton = tk.Button(SSD1306GUIPanel, text = "main",font=('Courier', 7), command = self.MazeDemo(20))
-        #self.MazeDemoButton.grid(row = 4, column = 0, sticky = tk.E+tk.W)
+        self.MazeDemoButton = tk.Button(SSD1306GUIPanel, text = "Maze",font=('Courier', 7), command = Maze.demo)
+        self.MazeDemoButton.grid(row = 4, column = 0, sticky = tk.E+tk.W)
 
 
 

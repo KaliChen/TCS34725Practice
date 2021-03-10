@@ -3,6 +3,7 @@
 # Ported from:
 # https://github.com/adafruit/Adafruit_Python_SSD1306/blob/master/examples/shapes.py
 import time
+import keyboard
 from demo_opts import device
 from oled.render import canvas
 from PIL import ImageFont, Image
@@ -62,7 +63,8 @@ def main():
         time.sleep(1.0) 
         SysInfo()
         # 暫停 1 秒
-        time.sleep(1.0)         
+        time.sleep(1.0)
+        if keyboard.is_pressed('q'):exit()        
 
 if __name__ == "__main__":
     main()

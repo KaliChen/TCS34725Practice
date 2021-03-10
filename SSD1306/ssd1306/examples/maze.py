@@ -6,6 +6,7 @@
 #    https://github.com/rm-hull/maze/blob/master/src/maze/generator.clj
 
 import time
+import keyboard
 from demo_opts import device
 from oled.render import canvas
 from random import randrange
@@ -134,6 +135,16 @@ class Maze(object):
         s += "+\n"
 
         return s
+
+    def demo():
+        screen = (128, 64)
+        while(1):
+            for scale in [2, 3, 4, 3]:
+                sz = list(map(lambda z: z / scale - 1, screen))
+                with canvas(device) as draw:
+                    Maze(sz).render(draw, lambda z: int(z * scale))
+                    time.sleep(1)
+            if keyboard.is_pressed('q'):exit()  
 
 
 def demo(iterations):
