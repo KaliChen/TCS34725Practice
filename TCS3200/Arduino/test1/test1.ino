@@ -9,6 +9,10 @@
 #define S2 6
 #define S3 7
 #define sensorOut 8
+#define LED 9
+int brightness =  0;
+int fadeAmount =  16;
+
 
 // Stores frequency read by the photodiodes
 int redFrequency = 0;
@@ -21,9 +25,11 @@ void setup() {
   pinMode(S1, OUTPUT);
   pinMode(S2, OUTPUT);
   pinMode(S3, OUTPUT);
+  pinMode(LED, OUTPUT);
   
   // Setting the sensorOut as an input
   pinMode(sensorOut, INPUT);
+  
   
   // Setting frequency scaling to 20%
   digitalWrite(S0,HIGH);
@@ -33,6 +39,17 @@ void setup() {
   Serial.begin(9600);
 }
 void loop() {
+  analogWrite(LED, brightness);
+   // change the brightness for next time through the loop:
+  brightness = brightness + fadeAmount;
+
+  // reverse the direction of the fading at the ends of the fade:
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
+  }
+  // wait for 30 milliseconds to see the dimming effect
+  delay(30);
+  
   // Setting RED (R) filtered photodiodes to be read
   digitalWrite(S2,LOW);
   digitalWrite(S3,LOW);
